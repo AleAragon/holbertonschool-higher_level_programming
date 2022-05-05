@@ -1,7 +1,5 @@
 if __name__ == "__main__":
     """Print the addition of all arguments."""
     from sys import argv
-    add = 0
-    for s in argv[1:]:
-        add = add + int(s)
-    print("{:d}".format(add))
+    add = sum(int(arg) for arg in argv[1:])
+    print(add)
