@@ -1,9 +1,9 @@
 #!/usr/bin/python3
-"""Module to list all states from database hbtn_0e_0_usa"""
+"""Module to list all states starting with N from database hbtn_0e_0_usa"""
 
 
 if __name__ == "__main__":
-    """Modeule to list states"""
+    """Module to list states starting with N"""
     import MySQLdb
     import sys
 

@@ -3,7 +3,7 @@
 
 
 if __name__ == "__main__":
-    """Modeule to list states"""
+    """Module to list states"""
     import MySQLdb
     import sys
 
