@@ -11,11 +11,11 @@ if __name__ == "__main__":
         host='localhost', user=sys.argv[1], passwd=sys.argv[2], db=sys.argv[3])
     cursor = db.cursor()
 
-    sql = "SELECT * FROM states WHERE states.name LIKE '_N_%' ORDER BY \
-states.id ASC"
+    sql = "SELECT * FROM states ORDER BY states.id ASC"
 
     cursor.execute(sql)
     states = cursor.fetchall()
 
     for state in states:
-        print(state)
+        if state[1].startswith('N'):
+            print(state)
