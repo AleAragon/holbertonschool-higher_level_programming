@@ -1,5 +1,5 @@
 #!/usr/bin/python3
-"""Defines a State model."""
+"""Defines a State model"""
 
 
 from sqlalchemy import Column, Integer, String, UniqueConstraint
