@@ -11,7 +11,7 @@ if __name__ == "__main__":
         host='localhost', user=sys.argv[1], passwd=sys.argv[2], db=sys.argv[3])
     cursor = db.cursor()
 
-    sql = "SELECT * FROM states WHERE name regexp '^N' ORDER BY states.id ASC"
+    sql = "SELECT * FROM states WHERE name like 'N%' ORDER BY states.id ASC"
 
     cursor.execute(sql)
     states = cursor.fetchall()
