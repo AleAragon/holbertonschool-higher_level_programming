@@ -1,9 +1,9 @@
 #!/usr/bin/python3
-"""Adds the State object “Louisiana” to the database hbtn_0e_6_usa"""
+"""Changes the name of a State object from the database hbtn_0e_6_usa"""
 
 
 if __name__ == '__main__':
-    """Adds the State object “Louisiana"""
+    """Changes name of a State"""
     import sys
     from sqlalchemy import create_engine
     from sqlalchemy.orm import sessionmaker
@@ -15,7 +15,6 @@ if __name__ == '__main__':
     Session = sessionmaker(bind=engine)
     session = Session()
 
-    louisiana = State(name="Louisiana")
-    session.add(louisiana)
+    state = session.query(State).filter_by(id=2).first()
+    state.name = "New Mexico"
     session.commit()
-    print(louisiana.id)
