@@ -1,9 +1,9 @@
 #!/usr/bin/python3
-"""Script that takes in an argument and displays all values in the states table of hbtn_0e_0_usa"""
+"""Displays all values in the states table of hbtn_0e_0_usa"""
 
 
 if __name__ == '__main__':
-    """ Module to select states"""
+    """ Module to displays all values"""
 
     import MySQLdb
     import sys
