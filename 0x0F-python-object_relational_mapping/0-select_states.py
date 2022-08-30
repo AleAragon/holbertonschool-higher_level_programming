@@ -3,17 +3,19 @@
 Module to list all states from database hbtn_0e_0_usa
 '''
 
-import MySQLdb
-import sys
 
-db = MySQLdb.connect(host='localhost', user=sys.argv[1], password=sys.argv[2], database=sys.argv[3])
-cursor = db.cursor()
+if __name__ == "__main__":
+    import MySQLdb
+    import sys
+
+    db = MySQLdb.connect(host='localhost', user=sys.argv[1], password=sys.argv[2], database=sys.argv[3])
+    cursor = db.cursor()
 
 
-sql = "SELECT * FROM states ORDER BY states.id ASC"
+    sql = "SELECT * FROM states ORDER BY states.id ASC"
 
-cursor.execute(sql)
-states = cursor.fetchall()
+    cursor.execute(sql)
+    states = cursor.fetchall()
 
-for state in states:
-    print(state)
+    for state in states:
+        print(state)
