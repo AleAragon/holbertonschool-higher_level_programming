@@ -5,6 +5,7 @@ Module to list all states from database hbtn_0e_0_usa
 
 
 if __name__ == "__main__":
+    """Modeule to list states"""
     import MySQLdb
     import sys
 
