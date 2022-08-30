@@ -8,12 +8,7 @@ if __name__ == '__main__':
     import MySQLdb
     import sys
 
-    db = MySQLdb.connect(host='localhost', user=sys.argv[1],
-                         passwd=sys.argv[2], db=sys.argv[3])
-    cur = db.cursor()
-    st = sys.argv[4].split('\'')
-    to = "SELECT * FROM states WHERE name='{}' ORDER BY id ASC".format(st[0])
-    cur.execute(to)
-    query_rows = cur.fetchall()
-    for row in query_rows:
-        print(row)
+    db = MySQLdb.connect(user=sys.argv[1], passwd=sys.argv[2], db=sys.argv[3])
+    c = db.cursor()
+    c.execute("SELECT * FROM `states`")
+    [print(state) for state in c.fetchall() if state[1] == sys.argv[4]]
